@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -22,11 +22,11 @@
             <scope>system</scope>
             <systemPath>D:/Applications/jdk1.8.0_361/lib/tools.jar</systemPath>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.google.auto.service</groupId>-->
-<!--            <artifactId>auto-service</artifactId>-->
-<!--            <version>1.0-rc5</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.google.auto.service</groupId>-->
+        <!--            <artifactId>auto-service</artifactId>-->
+        <!--            <version>1.0-rc5</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
@@ -55,7 +55,10 @@
                         <arg>-XDignore.symbol.file</arg>
                     </compilerArgs>
                     <compilerArguments>
-                        <bootclasspath>${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar${path.separator}${java.home}/lib/jsse.jar${path.separator}${java.home}/../lib/tools.jar</bootclasspath>                    </compilerArguments>
+                        <bootclasspath>
+                            ${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar${path.separator}${java.home}/lib/jsse.jar${path.separator}${java.home}/../lib/tools.jar
+                        </bootclasspath>
+                    </compilerArguments>
                     <fork>true</fork>
                 </configuration>
             </plugin>
